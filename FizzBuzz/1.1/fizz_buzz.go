@@ -3,11 +3,11 @@ package fizzbuzz
 import "strconv"
 
 func FizzBuzz(input int) string {
-	if input%3 == 0 && input%5 == 0 {
+	if isFizz(input) && input%5 == 0 {
 		return "FizzBuzz"
 	}
 
-	if input%3 == 0 {
+	if isFizz(input) {
 		return "Fizz"
 	}
 
@@ -16,4 +16,8 @@ func FizzBuzz(input int) string {
 	}
 
 	return strconv.Itoa(input)
+}
+
+func isFizz(input int) bool {
+	return input%3 == 0
 }

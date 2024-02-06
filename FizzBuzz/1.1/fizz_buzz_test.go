@@ -157,3 +157,16 @@ func TestFizzBuzz(t *testing.T) {
 		}
 	})
 }
+
+func TestIsFizz(t *testing.T) {
+	t.Run("should be return true when input 3", func(t *testing.T) {
+		input := 3
+		want := true
+
+		result := isFizz(input)
+
+		if result != want {
+			t.Errorf("isFizz should be return %v when input %v", want, input)
+		}
+	})
+}
