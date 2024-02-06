@@ -11,7 +11,7 @@ func FizzBuzz(input int) string {
 		return "Fizz"
 	}
 
-	if input == 5 || input == 10 {
+	if input%5 == 0 {
 		return "Buzz"
 	}
 
