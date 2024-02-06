@@ -3,7 +3,7 @@ package fizzbuzz
 import "strconv"
 
 func FizzBuzz(input int) string {
-	if isFizz(input) && input%5 == 0 {
+	if isFizz(input) && isBuzz(input) {
 		return "FizzBuzz"
 	}
 
@@ -11,7 +11,7 @@ func FizzBuzz(input int) string {
 		return "Fizz"
 	}
 
-	if input%5 == 0 {
+	if isBuzz(input) {
 		return "Buzz"
 	}
 
@@ -20,4 +20,8 @@ func FizzBuzz(input int) string {
 
 func isFizz(input int) bool {
 	return input%3 == 0
+}
+
+func isBuzz(input int) bool {
+	return input%5 == 0
 }
