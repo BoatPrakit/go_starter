@@ -180,4 +180,15 @@ func TestIsFizz(t *testing.T) {
 			t.Errorf("isFizz should be return %v when input %v", want, input)
 		}
 	})
+
+	t.Run("should be return false when input 4", func(t *testing.T) {
+		input := 4
+		want := false
+
+		result := isFizz(input)
+
+		if result != want {
+			t.Errorf("isFizz should be return %v when input %v", want, input)
+		}
+	})
 }
