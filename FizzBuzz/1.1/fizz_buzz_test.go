@@ -46,4 +46,15 @@ func TestFizzBuzz(t *testing.T) {
 			t.Errorf("FizzBuzz should return %v when input %v", want, input)
 		}
 	})
+
+	t.Run("should be return Buzz when input 5", func(t *testing.T) {
+		input := 5
+		want := "Buzz"
+
+		result := FizzBuzz(input)
+
+		if result != want {
+			t.Errorf("FizzBuzz should return %v when input %v", want, input)
+		}
+	})
 }
