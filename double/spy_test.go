@@ -25,6 +25,6 @@ func TestMethodShouldBeCalled(t *testing.T) {
 	}
 
 	if spy.methodCalled != want {
-		t.Errorf("want %v but got %v", want, spy.methodCalled)
+		t.Errorf("Expect to called Search in Find")
 	}
 }
