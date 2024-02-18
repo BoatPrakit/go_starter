@@ -50,4 +50,13 @@ func TestFirstNonRepeating(t *testing.T) {
 			t.Errorf("want %v but got %v", want, result)
 		}
 	})
+	t.Run("should return H when input Hello! World!", func(t *testing.T) {
+		want := "H"
+		input := "Hello! World!"
+		result := FirstNonRepeating(input)
+
+		if result != want {
+			t.Errorf("want %v but got %v", want, result)
+		}
+	})
 }
