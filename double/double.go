@@ -14,11 +14,11 @@ type Person struct {
 }
 
 type Queryer interface {
-	Search(p []Person, fn string, ln string) *Person
+	Search(p []*Person, fn string, ln string) *Person
 }
 
 type PhoneBook struct {
-	People []Person
+	People []*Person
 }
 
 func (p *PhoneBook) Find(q Queryer, firstName string, lastName string) (string, error) {

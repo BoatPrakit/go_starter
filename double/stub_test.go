@@ -6,7 +6,7 @@ type StubSearcher struct {
 	phone string
 }
 
-func (s *StubSearcher) Search(p []Person, firstName string, lastName string) *Person {
+func (s *StubSearcher) Search(p []*Person, firstName string, lastName string) *Person {
 	return &Person{
 		FirstName:   "John",
 		LastName:    "Doe",

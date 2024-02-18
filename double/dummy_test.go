@@ -4,7 +4,7 @@ import "testing"
 
 type DummySeacher struct{}
 
-func (d *DummySeacher) Search(p []Person, firstName string, lastName string) *Person {
+func (d *DummySeacher) Search(p []*Person, firstName string, lastName string) *Person {
 	return &Person{}
 }
 
