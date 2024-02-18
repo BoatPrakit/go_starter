@@ -1,5 +1,7 @@
 package codewars
 
+import "strings"
+
 /*
 Write a function named first_non_repeating_letter† that takes a string input, and returns the first character that is not repeated anywhere in the string.
 
@@ -13,15 +15,19 @@ Note: the function is called firstNonRepeatingLetter for historical reasons, but
 */
 
 func FirstNonRepeating(input string) string {
+	s := strings.ToLower(input)
+
 	myMap := make(map[string]int)
-	for _, k := range input {
+
+	for _, k := range s {
 		key := string(k)
 		myMap[key] += 1
 	}
 
-	for _, k := range input {
-		if myMap[string(k)] == 1 {
-			return string(k)
+	for i, k := range s {
+		key := string(k)
+		if myMap[key] == 1 {
+			return string(input[i])
 		}
 	}
 	return ""
