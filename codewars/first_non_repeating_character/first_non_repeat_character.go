@@ -13,8 +13,16 @@ Note: the function is called firstNonRepeatingLetter for historical reasons, but
 */
 
 func FirstNonRepeating(input string) string {
-	if input == "abcdefg" {
-		return "a"
+	myMap := make(map[string]int)
+	for _, k := range input {
+		key := string(k)
+		myMap[key] += 1
+	}
+
+	for _, k := range input {
+		if myMap[string(k)] == 1 {
+			return string(k)
+		}
 	}
 	return ""
 }
