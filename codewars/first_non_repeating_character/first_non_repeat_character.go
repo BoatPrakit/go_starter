@@ -13,5 +13,8 @@ Note: the function is called firstNonRepeatingLetter for historical reasons, but
 */
 
 func FirstNonRepeating(input string) string {
+	if input == "abcdefg" {
+		return "a"
+	}
 	return ""
 }
